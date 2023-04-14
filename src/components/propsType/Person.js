@@ -53,7 +53,6 @@ export default function Person(props) {
 
                 </tbody>
             </table>
-
         </div>
     )
 }

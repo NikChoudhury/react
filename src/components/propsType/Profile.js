@@ -75,8 +75,6 @@ export default function Profile(props) {
     )
 }
 
-
-
 Profile.propTypes = {
     name: PropTypes.string.isRequired,
     age: PropTypes.number.isRequired,

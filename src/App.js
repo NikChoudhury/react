@@ -6,7 +6,6 @@ import Person from "./components/propsType/Person";
 function App() {
   return (
     <>
-
       {/* Props and PropsTypes */}
       <Navbar title="Mininik" aboutUsText="About Mininik" />
       <Profile
