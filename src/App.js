@@ -11,6 +11,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import ReactPropsTypes from "./pages/propsType/ReactPropsTypes";
 import PropsLayout from "./pages/propsType/PropsLayout";
+import ReactState from "./pages/states/ReactState";
+import WordCounter from "./pages/states/WordCounter";
 
 function App() {
   return (
@@ -65,8 +67,6 @@ function App() {
             />
           </Route>
 
-
-
           <Route
             path="*"
             element={
@@ -77,6 +77,8 @@ function App() {
               </div>
             }
           />
+          <Route path="/react-state" element={<ReactState />} />
+          <Route path="/react-state/word-counter" element={<WordCounter />} />
         </Routes >
         <Footer />
       </div >

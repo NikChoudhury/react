@@ -9,6 +9,9 @@ export default function Footer(props) {
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/props">Props and PropsTypes</NavLink>
                     </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/react-state">React State</NavLink>
+                    </li>
                 </ul>
             </div>
         </footer>
