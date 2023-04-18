@@ -67,6 +67,24 @@ export default function WordCounter() {
         return sentencesCount.length
     }
 
+    const handleReplaceBadWordWithStar = () => {
+        const badWords = ["fuck", "fucking", "ass"];
+        let words = text.split(/[ ]+/);
+
+        const censoredWords = badWords.map(badWords => "*".repeat(badWords.length));
+        // console.log(censoredWords);
+
+        const censorSentence = words.map(word => {
+            if (badWords.includes(word.toLowerCase())) {
+                const index = badWords.findIndex(badWord => badWord.toLowerCase() === word.toLowerCase());
+                return censoredWords[index];
+            }
+            return word;
+
+        });
+        setText(censorSentence.join(" "));
+    }
+
     return (
         <div className='container'>
             <h1>Word Counter</h1>
@@ -87,6 +105,7 @@ export default function WordCounter() {
                 <button type="button" onClick={() => handleClearClick()} className="btn btn-success">Clear</button>
                 <button type="button" onClick={() => handleCopyClick()} className="btn btn-success">Copy Text</button>
                 <button type="button" onClick={() => handleExtraSpaces()} className="btn btn-success">Remove Extra Space</button>
+                <button type="button" onClick={() => handleReplaceBadWordWithStar()} className="btn btn-success">Replace Bad Word</button>
 
             </div>
 
