@@ -9,6 +9,9 @@ export default function HooksNavigation() {
                 <li>
                     <Link to="/react-hooks/use-state">useState</Link>
                 </li>
+                <li>
+                    <Link to="/react-hooks/use-effect">useEffect</Link>
+                </li>
             </ul>
         </div>
     )

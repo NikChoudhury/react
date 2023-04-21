@@ -16,6 +16,7 @@ import WordCounter from "./pages/states/WordCounter";
 import HookLayout from "./pages/reactHooks/HookLayout";
 import UseStateHook from "./pages/reactHooks/UseStateHook";
 import HooksNavigation from "./pages/reactHooks/HooksNavigation";
+import UseEffect from "./pages/reactHooks/UseEffect";
 
 function App() {
   return (
@@ -86,6 +87,7 @@ function App() {
           <Route path="/react-hooks" element={<HookLayout />}>
             <Route index element={<HooksNavigation />} />
             <Route path="use-state" element={<UseStateHook />} />
+            <Route path="use-effect" element={<UseEffect />} />
           </Route>
         </Routes >
         <Footer />
