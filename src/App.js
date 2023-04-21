@@ -13,6 +13,9 @@ import ReactPropsTypes from "./pages/propsType/ReactPropsTypes";
 import PropsLayout from "./pages/propsType/PropsLayout";
 import ReactState from "./pages/states/ReactState";
 import WordCounter from "./pages/states/WordCounter";
+import HookLayout from "./pages/reactHooks/HookLayout";
+import UseStateHook from "./pages/reactHooks/UseStateHook";
+import HooksNavigation from "./pages/reactHooks/HooksNavigation";
 
 function App() {
   return (
@@ -79,6 +82,11 @@ function App() {
           />
           <Route path="/react-state" element={<ReactState />} />
           <Route path="/react-state/word-counter" element={<WordCounter />} />
+
+          <Route path="/react-hooks" element={<HookLayout />}>
+            <Route index element={<HooksNavigation />} />
+            <Route path="use-state" element={<UseStateHook />} />
+          </Route>
         </Routes >
         <Footer />
       </div >
